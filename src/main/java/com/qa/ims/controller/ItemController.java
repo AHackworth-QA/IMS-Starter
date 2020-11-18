@@ -68,6 +68,16 @@ public class ItemController implements CrudController<Item> {
 		Long id = utils.getLong();
 		return itemDAO.delete(id);
 	}
+	
+	public Item addItems() {
+		return null;
+		
+	}
+	
+	public int deleteItems() {
+		return 0;
+		
+	}
 }
 	
 

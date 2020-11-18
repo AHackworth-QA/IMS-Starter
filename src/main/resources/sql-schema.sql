@@ -24,3 +24,12 @@ product_value DECIMAL(4,2),
 stock INT, 
 PRIMARY KEY (product_id));   
 
+create table `ims`.`order_items`(
+orderitem_id INT unique not null auto_increment,
+total_cost DECIMAL(4,2),
+order_quantity INT, 
+product_id INT not null,
+order_id INT not null,
+PRIMARY KEY (orderitem_id),
+FOREIGN KEY (product_id) REFERENCES `items`(product_id),
+FOREIGN KEY (order_id) REFERENCES `orders`(order_id));

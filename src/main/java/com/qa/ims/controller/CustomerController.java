@@ -83,5 +83,15 @@ public class CustomerController implements CrudController<Customer> {
 		Long id = utils.getLong();
 		return customerDAO.delete(id);
 	}
+	
+	public Customer addItems() {
+		return null;
+		
+	}
+	
+	public int deleteItems() {
+		return 0;
+		
+	}
 
 }
