@@ -9,10 +9,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+You must have a Intergrated Delevlopment Environment (IDE) installed that can run Java 8 at least I used Eclipse. It must also have the neccessary Maven Pluggin installed so that it can be used. 
 
 ```
-Give examples
+Install Java 8 from 
+
+Install Maven from
+
+Install Eclipse from
 ```
 
 ### Installing
@@ -35,7 +39,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-Explain how to run the automated tests for this system. Break down into which tests and what they do
+When running tests for the application I used both JUnit and Mockito. To use these I imported the JUnit Before, BeforeClass and Test onto a test class for my customer, order and items DAO. Once these were imported I could run them with @BeforeClass, @Before, and, @Test. This would allow me to see the overall test coverage for my IMS.
 
 ### Unit Tests 
 
