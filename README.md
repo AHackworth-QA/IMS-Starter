@@ -1,7 +1,7 @@
 Coverage: 34%
-# Project Title
+# Inventory Management System
 
-One Paragraph of project description goes here
+The following documents contain the neccessary code to work the Iventory Management System (IMS), this includes a customer, order, and, item entity all of which have their own DAO, controller and main classes all of which was coded in java using the software Eclispe. This all links up to a MySQL server that contains the database for the code which can be accessed by typing in the application.  
 
 ## Getting Started
 
@@ -75,6 +75,7 @@ We use [SemVer](http://semver.org/) for versioning.
 ## Authors
 
 * **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
+* **Adam Hackworth** - [AdamHackworth](https://github.com/AHackworth)
 
 ## License
 
