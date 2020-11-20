@@ -90,22 +90,23 @@ If you would like to add some tests of your own simply use the file explorer on 
 
 ### Unit Tests 
 
-Explain what these tests test, why and how to run them
+Unit tests are performed by JUnit and they test the DAO files in the IMS. They are used to see if the DAO is giveing out the correct response when called upon. 
+These are useful to see if any part of the code is failing for example I created a JUnit test for the CustomerDAO which looked at the Create function of the DAO and made sure that a customer we are trying to make is in the system. 
+
+To run just the DAO JUnit tests find them in the src/test/java area of the project and right click and run as JUnit test.
 
 ```
-Give an example
+@Test
+	public void testCreate() {
+		final Customer created = new Customer(2L, "chris", "perrins", "chris.perrins@gmail.com");
+		assertEquals(created, DAO.create(created));
+	}
 ```
+Here is an example of the create test which makes sure that a Chris Perrins can be added to the system.
+
 
 ### Integration Tests 
 Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
 
 ```
 Give an example
@@ -118,10 +119,14 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management
+Eclipse - Java IDE software
+MySQLWorkbench - SQL Server 
+
+(links found above)
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning.
+GitHub for version control 
 
 ## Authors
 
