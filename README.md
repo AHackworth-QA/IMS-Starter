@@ -12,11 +12,11 @@ These instructions will get you a copy of the project up and running on your loc
 You must have a Intergrated Delevlopment Environment (IDE) installed that can run Java 8 at least I used Eclipse. It must also have the neccessary Maven Pluggin installed so that it can be used. 
 
 ```
-Install Java 8 from 
+Install Java 8 development kit from https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html 
 
-Install Maven from
+Install Maven from https://maven.apache.org/download.cgi
 
-Install Eclipse from
+Install Eclipse from https://www.eclipse.org/
 ```
 
 ### Installing
