@@ -106,15 +106,39 @@ Here is an example of the create test which makes sure that a Chris Perrins can 
 
 
 ### Integration Tests 
-Explain what these tests test, why and how to run them
+I used Mockito to perform intergration testing. Mockito will put in a mock input for the IMS for example a fake customer with the expected first name, last name and email sections filled in. This allows to test for when a customer gets created no just testing values you know are in the system already. These can be located in the controller section of the test section of the Eclipse IMS file
 
 ```
-Give an example
+@Test
+	public void testCreate() {
+		final String F_NAME = "barry", L_NAME = "scott", email = "Barry.scott@gmail.com";
+		final Customer created = new Customer(F_NAME, L_NAME, email);
+
+		Mockito.when(utils.getString()).thenReturn(F_NAME, L_NAME, email);
+		Mockito.when(dao.create(created)).thenReturn(created);
+
+		assertEquals(created, controller.create());
+
+		Mockito.verify(utils, Mockito.times(3)).getString();
+		Mockito.verify(dao, Mockito.times(1)).create(created);
+	}
+
 ```
+This mock test would make a new customer Barry Scott if the system wasn't being mocked up.
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+To deploy the IMS you need to create a .jar file.
+
+To do this you need to navigate to the IMS-starter file in the file explorer and then open windows powershell in the required location.
+
+Typing mvn clean package will return a .jar file as this tells Maven to create one. 
+
+There should now be a new file called target this should contain one with dependancies and one with out we need the one with.
+
+to run this in the command line type java -jar <file-pathway>
+
+you should now be in the application.
 
 ## Built With
 
