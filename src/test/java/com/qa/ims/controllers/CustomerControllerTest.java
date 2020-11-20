@@ -34,12 +34,12 @@ public class CustomerControllerTest {
 		final String F_NAME = "barry", L_NAME = "scott", email = "Barry.scott@gmail.com";
 		final Customer created = new Customer(F_NAME, L_NAME, email);
 
-		Mockito.when(utils.getString()).thenReturn(F_NAME, L_NAME);
+		Mockito.when(utils.getString()).thenReturn(F_NAME, L_NAME, email);
 		Mockito.when(dao.create(created)).thenReturn(created);
 
 		assertEquals(created, controller.create());
 
-		Mockito.verify(utils, Mockito.times(2)).getString();
+		Mockito.verify(utils, Mockito.times(3)).getString();
 		Mockito.verify(dao, Mockito.times(1)).create(created);
 	}
 
@@ -66,7 +66,7 @@ public class CustomerControllerTest {
 		assertEquals(updated, this.controller.update());
 
 		Mockito.verify(this.utils, Mockito.times(1)).getLong();
-		Mockito.verify(this.utils, Mockito.times(2)).getString();
+		Mockito.verify(this.utils, Mockito.times(3)).getString();
 		Mockito.verify(this.dao, Mockito.times(1)).update(updated);
 	}
 
